@@ -29,7 +29,7 @@ public class Dashboard extends javax.swing.JFrame {
         initComponents();
         Dbconnect db = new Dbconnect();
         con=db.connect();
-        jLabel5.setText("Welcom "+uname);
+        welcomeLabel.setText("Welcom "+uname);
         displayArticleTable();
     }
 
@@ -64,35 +64,40 @@ public class Dashboard extends javax.swing.JFrame {
     private void initComponents() {
 
         jPopupMenu2 = new javax.swing.JPopupMenu();
-        jMenuItem1 = new javax.swing.JMenuItem();
-        jMenuItem2 = new javax.swing.JMenuItem();
+        exitTicketOption = new javax.swing.JMenuItem();
+        returnTicketOption = new javax.swing.JMenuItem();
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
-        jToggleButton1 = new javax.swing.JToggleButton();
-        jToggleButton2 = new javax.swing.JToggleButton();
-        jToggleButton3 = new javax.swing.JToggleButton();
-        jToggleButton5 = new javax.swing.JToggleButton();
-        jPanel3 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
+        dashboardButton = new javax.swing.JToggleButton();
+        accountSettingsButton = new javax.swing.JToggleButton();
+        helpButton = new javax.swing.JToggleButton();
+        advancedSearchButton = new javax.swing.JToggleButton();
+        logoPanel = new javax.swing.JPanel();
+        logoLabel = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
-        jLabel2 = new javax.swing.JLabel();
+        movesTable = new javax.swing.JTable();
+        movesLabel = new javax.swing.JLabel();
         jScrollPane3 = new javax.swing.JScrollPane();
         articleTable = new javax.swing.JTable();
         jLabel3 = new javax.swing.JLabel();
-        jToggleButton4 = new javax.swing.JToggleButton();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
+        newMove = new javax.swing.JToggleButton();
+        dashboardLabel = new javax.swing.JLabel();
+        welcomeLabel = new javax.swing.JLabel();
+        dashboardLogo = new javax.swing.JLabel();
 
-        jMenuItem1.setText("Exit Ticket");
-        jMenuItem1.addMouseListener(new java.awt.event.MouseAdapter() {
+        jPopupMenu2.setBackground(new java.awt.Color(255, 255, 255));
+        jPopupMenu2.setForeground(new java.awt.Color(0, 0, 0));
+
+        exitTicketOption.setForeground(new java.awt.Color(0, 0, 0));
+        exitTicketOption.setText("Exit Ticket");
+        exitTicketOption.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jMenuItem1MouseClicked(evt);
+                exitTicketOptionMouseClicked(evt);
             }
         });
 
-        jMenuItem2.setText("jMenuItem2");
+        returnTicketOption.setForeground(new java.awt.Color(0, 0, 0));
+        returnTicketOption.setText("Return Ticket");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -100,99 +105,99 @@ public class Dashboard extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(0, 0, 51));
 
-        jToggleButton1.setBackground(new java.awt.Color(204, 102, 0));
-        jToggleButton1.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        jToggleButton1.setText("Dashboard");
-        jToggleButton1.setBorder(null);
-        jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
+        dashboardButton.setBackground(new java.awt.Color(204, 102, 0));
+        dashboardButton.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        dashboardButton.setText("Dashboard");
+        dashboardButton.setBorder(null);
+        dashboardButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jToggleButton1ActionPerformed(evt);
+                dashboardButtonActionPerformed(evt);
             }
         });
 
-        jToggleButton2.setBackground(new java.awt.Color(204, 102, 0));
-        jToggleButton2.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        jToggleButton2.setText("Account");
-        jToggleButton2.setBorder(null);
-        jToggleButton2.addActionListener(new java.awt.event.ActionListener() {
+        accountSettingsButton.setBackground(new java.awt.Color(204, 102, 0));
+        accountSettingsButton.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        accountSettingsButton.setText("Account");
+        accountSettingsButton.setBorder(null);
+        accountSettingsButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jToggleButton2ActionPerformed(evt);
+                accountSettingsButtonActionPerformed(evt);
             }
         });
 
-        jToggleButton3.setBackground(new java.awt.Color(204, 102, 0));
-        jToggleButton3.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        jToggleButton3.setText("Help");
-        jToggleButton3.setBorder(null);
-        jToggleButton3.addActionListener(new java.awt.event.ActionListener() {
+        helpButton.setBackground(new java.awt.Color(204, 102, 0));
+        helpButton.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        helpButton.setText("Help");
+        helpButton.setBorder(null);
+        helpButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jToggleButton3ActionPerformed(evt);
+                helpButtonActionPerformed(evt);
             }
         });
 
-        jToggleButton5.setBackground(new java.awt.Color(204, 102, 0));
-        jToggleButton5.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        jToggleButton5.setText("Advanced Search");
-        jToggleButton5.setBorder(null);
-        jToggleButton5.addActionListener(new java.awt.event.ActionListener() {
+        advancedSearchButton.setBackground(new java.awt.Color(204, 102, 0));
+        advancedSearchButton.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        advancedSearchButton.setText("Advanced Search");
+        advancedSearchButton.setBorder(null);
+        advancedSearchButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jToggleButton5ActionPerformed(evt);
+                advancedSearchButtonActionPerformed(evt);
             }
         });
 
-        jPanel3.setBackground(new java.awt.Color(255, 255, 255));
+        logoPanel.setBackground(new java.awt.Color(255, 255, 255));
 
-        jLabel1.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel1.setIcon(new javax.swing.ImageIcon("/run/media/lyeschl/ssd/main/load/output-onlinepngtools(1).png")); // NOI18N
+        logoLabel.setBackground(new java.awt.Color(255, 255, 255));
+        logoLabel.setIcon(new javax.swing.ImageIcon("/run/media/lyeschl/ssd/main/load/output-onlinepngtools(1).png")); // NOI18N
 
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+        javax.swing.GroupLayout logoPanelLayout = new javax.swing.GroupLayout(logoPanel);
+        logoPanel.setLayout(logoPanelLayout);
+        logoPanelLayout.setHorizontalGroup(
+            logoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, logoPanelLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel1)
+                .addComponent(logoLabel)
                 .addContainerGap())
         );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+        logoPanelLayout.setVerticalGroup(
+            logoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, logoPanelLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jLabel1))
+                .addComponent(logoLabel))
         );
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jToggleButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jToggleButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jToggleButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jToggleButton5, javax.swing.GroupLayout.DEFAULT_SIZE, 98, Short.MAX_VALUE)
+            .addComponent(dashboardButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(accountSettingsButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(helpButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(advancedSearchButton, javax.swing.GroupLayout.DEFAULT_SIZE, 98, Short.MAX_VALUE)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(logoPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(logoPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(8, 8, 8)
-                .addComponent(jToggleButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(dashboardButton, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jToggleButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(advancedSearchButton, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jToggleButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(accountSettingsButton, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jToggleButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(helpButton, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(29, 29, 29))
         );
 
-        jTable1.setBackground(new java.awt.Color(255, 255, 255));
-        jTable1.setForeground(new java.awt.Color(153, 204, 255));
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        movesTable.setBackground(new java.awt.Color(255, 255, 255));
+        movesTable.setForeground(new java.awt.Color(153, 204, 255));
+        movesTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -203,14 +208,14 @@ public class Dashboard extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jTable1.setGridColor(new java.awt.Color(51, 102, 255));
-        jTable1.setSelectionBackground(new java.awt.Color(102, 153, 255));
-        jTable1.setSelectionForeground(new java.awt.Color(102, 102, 255));
-        jScrollPane1.setViewportView(jTable1);
+        movesTable.setGridColor(new java.awt.Color(51, 102, 255));
+        movesTable.setSelectionBackground(new java.awt.Color(102, 153, 255));
+        movesTable.setSelectionForeground(new java.awt.Color(102, 102, 255));
+        jScrollPane1.setViewportView(movesTable);
 
-        jLabel2.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(0, 0, 51));
-        jLabel2.setText("Movements");
+        movesLabel.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
+        movesLabel.setForeground(new java.awt.Color(0, 0, 51));
+        movesLabel.setText("Movements");
 
         articleTable.setBackground(new java.awt.Color(255, 255, 255));
         articleTable.setForeground(new java.awt.Color(153, 204, 255));
@@ -234,26 +239,31 @@ public class Dashboard extends javax.swing.JFrame {
         jLabel3.setForeground(new java.awt.Color(0, 0, 51));
         jLabel3.setText("Articles");
 
-        jToggleButton4.setBackground(new java.awt.Color(0, 0, 51));
-        jToggleButton4.setFont(new java.awt.Font("Roboto", 1, 12)); // NOI18N
-        jToggleButton4.setForeground(new java.awt.Color(255, 255, 255));
-        jToggleButton4.setText("New Move +");
-        jToggleButton4.setBorder(null);
-        jToggleButton4.addMouseListener(new java.awt.event.MouseAdapter() {
+        newMove.setBackground(new java.awt.Color(0, 0, 51));
+        newMove.setFont(new java.awt.Font("Roboto", 1, 12)); // NOI18N
+        newMove.setForeground(new java.awt.Color(255, 255, 255));
+        newMove.setText("New Move +");
+        newMove.setBorder(null);
+        newMove.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
-                jToggleButton4MousePressed(evt);
+                newMoveMousePressed(evt);
+            }
+        });
+        newMove.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                newMoveActionPerformed(evt);
             }
         });
 
-        jLabel4.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(0, 0, 51));
-        jLabel4.setText("Dashboard");
+        dashboardLabel.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
+        dashboardLabel.setForeground(new java.awt.Color(0, 0, 51));
+        dashboardLabel.setText("Dashboard");
 
-        jLabel5.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(0, 0, 51));
-        jLabel5.setText("Welcome");
+        welcomeLabel.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
+        welcomeLabel.setForeground(new java.awt.Color(0, 0, 51));
+        welcomeLabel.setText("Welcome");
 
-        jLabel6.setIcon(new javax.swing.ImageIcon("/run/media/lyeschl/ssd/main/dox/study/l3si/pfe/thesis/images/icons/dashboard_icon.png")); // NOI18N
+        dashboardLogo.setIcon(new javax.swing.ImageIcon("/run/media/lyeschl/ssd/main/dox/study/l3si/pfe/thesis/images/icons/dashboard_icon.png")); // NOI18N
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -264,7 +274,7 @@ public class Dashboard extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel5)
+                        .addComponent(welcomeLabel)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 235, Short.MAX_VALUE)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -272,14 +282,14 @@ public class Dashboard extends javax.swing.JFrame {
                                     .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel3))
                                 .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jLabel2)))
+                            .addComponent(movesLabel)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(5, 5, 5)
-                        .addComponent(jLabel6)
+                        .addComponent(dashboardLogo)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel4)
+                        .addComponent(dashboardLabel)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jToggleButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(newMove, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -289,9 +299,9 @@ public class Dashboard extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jToggleButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel4))
-                    .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.TRAILING))
+                        .addComponent(newMove, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(dashboardLabel))
+                    .addComponent(dashboardLogo, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -303,11 +313,11 @@ public class Dashboard extends javax.swing.JFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLabel2)
+                                .addComponent(movesLabel)
                                 .addGap(18, 18, 18))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jLabel5)
+                                .addComponent(welcomeLabel)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(173, 173, 173))))
@@ -327,40 +337,44 @@ public class Dashboard extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
+    private void dashboardButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dashboardButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jToggleButton1ActionPerformed
+    }//GEN-LAST:event_dashboardButtonActionPerformed
 
-    private void jToggleButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton2ActionPerformed
+    private void accountSettingsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_accountSettingsButtonActionPerformed
         // TODO add your handling code here:
         dispose();
         AccountSettings as = new AccountSettings();
         as.setVisible(true);
-    }//GEN-LAST:event_jToggleButton2ActionPerformed
+    }//GEN-LAST:event_accountSettingsButtonActionPerformed
 
-    private void jToggleButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton3ActionPerformed
+    private void helpButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_helpButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jToggleButton3ActionPerformed
+    }//GEN-LAST:event_helpButtonActionPerformed
 
-    private void jToggleButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton5ActionPerformed
+    private void advancedSearchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_advancedSearchButtonActionPerformed
         // TODO add your handling code here:
         dispose();
         
         AdvancedSearch advs = new AdvancedSearch();
         advs.setVisible(true);
-    }//GEN-LAST:event_jToggleButton5ActionPerformed
+    }//GEN-LAST:event_advancedSearchButtonActionPerformed
 
-    private void jMenuItem1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuItem1MouseClicked
+    private void exitTicketOptionMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitTicketOptionMouseClicked
         // TODO add your handling code here:
         dispose();
         ExitTicketInterface eti = new ExitTicketInterface();
         eti.setVisible(true);
-    }//GEN-LAST:event_jMenuItem1MouseClicked
+    }//GEN-LAST:event_exitTicketOptionMouseClicked
 
-    private void jToggleButton4MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jToggleButton4MousePressed
+    private void newMoveMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_newMoveMousePressed
         // TODO add your handling code here:
-        jPopupMenu2.show(jToggleButton4, 0, jToggleButton4.getHeight());
-    }//GEN-LAST:event_jToggleButton4MousePressed
+        jPopupMenu2.show(newMove, 0, newMove.getHeight());
+    }//GEN-LAST:event_newMoveMousePressed
+
+    private void newMoveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_newMoveActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_newMoveActionPerformed
 
     /**
      * @param args the command line arguments
@@ -399,26 +413,26 @@ public class Dashboard extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JToggleButton accountSettingsButton;
+    private javax.swing.JToggleButton advancedSearchButton;
     private javax.swing.JTable articleTable;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JToggleButton dashboardButton;
+    private javax.swing.JLabel dashboardLabel;
+    private javax.swing.JLabel dashboardLogo;
+    private javax.swing.JMenuItem exitTicketOption;
+    private javax.swing.JToggleButton helpButton;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
     private javax.swing.JPopupMenu jPopupMenu2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JTable jTable1;
-    private javax.swing.JToggleButton jToggleButton1;
-    private javax.swing.JToggleButton jToggleButton2;
-    private javax.swing.JToggleButton jToggleButton3;
-    private javax.swing.JToggleButton jToggleButton4;
-    private javax.swing.JToggleButton jToggleButton5;
+    private javax.swing.JLabel logoLabel;
+    private javax.swing.JPanel logoPanel;
+    private javax.swing.JLabel movesLabel;
+    private javax.swing.JTable movesTable;
+    private javax.swing.JToggleButton newMove;
+    private javax.swing.JMenuItem returnTicketOption;
+    private javax.swing.JLabel welcomeLabel;
     // End of variables declaration//GEN-END:variables
 }
