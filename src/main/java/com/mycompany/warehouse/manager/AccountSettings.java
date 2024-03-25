@@ -49,7 +49,7 @@ public class AccountSettings extends javax.swing.JFrame {
         jLabel5.setIcon(new javax.swing.ImageIcon("/run/media/lyeschl/ssd/main/load/output-onlinepngtools(1).png")); // NOI18N
 
         jButton1.setBackground(new java.awt.Color(255, 255, 255));
-        jButton1.setFont(new java.awt.Font("Roboto", 0, 11)); // NOI18N
+        jButton1.setFont(new java.awt.Font("POI Aeronaut Trial", 0, 11)); // NOI18N
         jButton1.setForeground(new java.awt.Color(204, 0, 0));
         jButton1.setText("Delete Account ?");
         jButton1.setBorder(null);
@@ -62,17 +62,23 @@ public class AccountSettings extends javax.swing.JFrame {
         jPanel3.setBackground(new java.awt.Color(0, 0, 51));
 
         jLabel2.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel2.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("POI Aeronaut Trial", 0, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("username");
 
         jLabel3.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel3.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("POI Aeronaut Trial", 0, 14)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("password");
 
+        jButton2.setBackground(new java.awt.Color(255, 255, 255));
+        jButton2.setFont(new java.awt.Font("POI Aeronaut Trial", 0, 11)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(0, 0, 0));
         jButton2.setText("username");
 
+        jButton3.setBackground(new java.awt.Color(255, 255, 255));
+        jButton3.setFont(new java.awt.Font("POI Aeronaut Trial", 0, 11)); // NOI18N
+        jButton3.setForeground(new java.awt.Color(0, 0, 0));
         jButton3.setText("**************");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
@@ -108,8 +114,9 @@ public class AccountSettings extends javax.swing.JFrame {
                 .addContainerGap(14, Short.MAX_VALUE))
         );
 
-        jButton4.setBackground(new java.awt.Color(153, 51, 0));
-        jButton4.setFont(new java.awt.Font("Roboto", 0, 11)); // NOI18N
+        jButton4.setBackground(new java.awt.Color(51, 0, 0));
+        jButton4.setFont(new java.awt.Font("POI Aeronaut Trial", 0, 11)); // NOI18N
+        jButton4.setForeground(new java.awt.Color(255, 255, 255));
         jButton4.setText("<< Back to Dashboard");
         jButton4.setBorder(null);
         jButton4.addActionListener(new java.awt.event.ActionListener() {
@@ -133,7 +140,7 @@ public class AccountSettings extends javax.swing.JFrame {
                 .addComponent(jButton1)
                 .addGap(113, 113, 113))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(90, Short.MAX_VALUE)
+                .addContainerGap(98, Short.MAX_VALUE)
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(80, 80, 80))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
@@ -189,7 +196,7 @@ public class AccountSettings extends javax.swing.JFrame {
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
         dispose();
-        Dashboard d = new Dashboard("lyeschl");
+        DashboardEntry d = new DashboardEntry("lyeschl");
         d.setVisible(true);
     }//GEN-LAST:event_jButton4ActionPerformed
 

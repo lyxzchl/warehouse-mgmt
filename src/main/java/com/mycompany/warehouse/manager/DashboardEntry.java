@@ -17,7 +17,7 @@ import java.sql.ResultSet;
  *
  * @author lyeschl
  */
-public class Dashboard extends javax.swing.JFrame {
+public class DashboardEntry extends javax.swing.JFrame {
     
     /**
      * Creates new form DashboardEntry
@@ -25,7 +25,7 @@ public class Dashboard extends javax.swing.JFrame {
     Connection con;
     PreparedStatement pst;
     ResultSet rs;
-    public Dashboard(String uname) {
+    public DashboardEntry(String uname) {
         initComponents();
         Dbconnect db = new Dbconnect();
         con=db.connect();
@@ -246,7 +246,7 @@ public class Dashboard extends javax.swing.JFrame {
         newMove.setBackground(new java.awt.Color(0, 0, 51));
         newMove.setFont(new java.awt.Font("POI Aeronaut Trial", 1, 14)); // NOI18N
         newMove.setForeground(new java.awt.Color(255, 255, 255));
-        newMove.setText("Search");
+        newMove.setText("New Move +");
         newMove.setBorder(null);
         newMove.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
@@ -398,23 +398,21 @@ public class Dashboard extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Dashboard.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DashboardEntry.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Dashboard.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DashboardEntry.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Dashboard.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DashboardEntry.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Dashboard.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DashboardEntry.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
-        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Dashboard("lyeschl").setVisible(true);
+                new DashboardEntry("lyeschl").setVisible(true);
                 
             }
         });
