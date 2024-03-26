@@ -89,7 +89,7 @@ public class Article extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(102, 51, 0));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon("/run/media/lyeschl/ssd/main/dox/study/l3si/pfe/thesis/images/icons/sheet_logo.png")); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sheet_logo.png"))); // NOI18N
 
         jLabel3.setFont(new java.awt.Font("POI Aeronaut Trial", 1, 24)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(0, 0, 0));

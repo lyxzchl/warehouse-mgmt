@@ -148,7 +148,7 @@ public class Dashboard extends javax.swing.JFrame {
         logoPanel.setBackground(new java.awt.Color(255, 255, 255));
 
         logoLabel.setBackground(new java.awt.Color(255, 255, 255));
-        logoLabel.setIcon(new javax.swing.ImageIcon("/run/media/lyeschl/ssd/main/load/output-onlinepngtools(1).png")); // NOI18N
+        logoLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/output-onlinepngtools(1).png"))); // NOI18N
 
         javax.swing.GroupLayout logoPanelLayout = new javax.swing.GroupLayout(logoPanel);
         logoPanel.setLayout(logoPanelLayout);
@@ -263,7 +263,7 @@ public class Dashboard extends javax.swing.JFrame {
         welcomeLabel.setForeground(new java.awt.Color(0, 0, 51));
         welcomeLabel.setText("Welcome");
 
-        dashboardLogo.setIcon(new javax.swing.ImageIcon("/run/media/lyeschl/ssd/main/dox/study/l3si/pfe/thesis/images/icons/dashboard_icon.png")); // NOI18N
+        dashboardLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/dashboard_icon.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
